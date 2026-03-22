@@ -38,12 +38,12 @@ Only ask follow-up questions if you truly cannot guess the purpose. Keep questio
 
 Present a short plain English plan:
 ```
-App name: [name]
-What it does: [one sentence]
-Features:
+**App name:** [name]
+**What it does:** [one sentence]
+**Features:**
   - [plain English, no RC terms]
   - [plain English, no RC terms]
-Sound good?
+**Sound good?**
 ```
 
 Wait for confirmation. If user changes anything — update plan and show again.
@@ -114,11 +114,30 @@ Fix anything silently before proceeding.
 
 ---
 
+## STEP 5.5 — Generate Tests (run silently)
+
+After review passes, generate a basic test file for the app.
+
+Create `tests/AppName.test.ts` with Jest tests covering:
+- main app feature works as expected
+- bot/app sender is rejected (if message listener present)
+- command responds correctly (if slash command present)
+- data saves and retrieves correctly (if persistence present)
+
+Then run:
+```bash
+npm test
+```
+
+Fix any test failures silently before proceeding.
+
+---
+
 ## STEP 6 — Done
 
 Tell user:
 
-"✅ App built and packaged!
+"App built and packaged!
 
 To install:
 1. Open Rocket.Chat Admin Panel
