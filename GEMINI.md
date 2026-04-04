@@ -133,7 +133,35 @@ Fix any test failures silently before proceeding.
 
 ---
 
-## STEP 6 — Done
+## STEP 6 — Preview (show to user)
+
+Before telling the user to deploy, show a plain English preview that MIMICS a real conversation of the rocket chat app we made .
+Show it like a fake chat — so the user can visualize exactly what will happen inside the rocket chat and how it will work:
+```
+Here is a preview of how your app will behave:
+
+──────────────────────────────────────
+User: <user msg>
+Bot: <bot reply according to our rc app>
+
+User: <user msg>
+Bot: <bot reply according to our rc app>
+──────────────────────────────────────
+
+Does this match what you wanted?
+If yes, I will give you the deploy instructions.
+If no, tell me what to change and I will update the app.
+```
+
+Use real example messages based on what the user originally asked for.
+Show at least 1-2 example interactions including one edge case.
+
+Wait for user confirmation before giving deploy instructions.
+If user wants changes — go back to STEP 1 with the new requirement.
+
+---
+
+## STEP 7 — Done
 
 Tell user:
 
