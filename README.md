@@ -4,7 +4,7 @@ A Gemini CLI extension that helps anyone build Rocket.Chat Apps using plain Engl
 
 ## What it does
 
-You describe what you want in plain English. The extension handles everything — scaffolding, code generation, validation, and packaging.
+You describe what you want in plain English. The extension handles everything — scaffolding, code generation, validation, test generation, previewing, and packaging.
 ```
 "hey i want a bot that greets users when they say hello"
         ↓
@@ -12,7 +12,11 @@ gemini shows a plain English plan
         ↓
 you confirm or modify
         ↓
-working RC app generated and packaged
+working RC app generated and tested
+        ↓
+fake chat preview shows exactly how the app will behave
+        ↓
+app packaged and ready to deploy
 ```
 
 ## How it works
